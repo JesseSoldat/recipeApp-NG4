@@ -1,3 +1,4 @@
+import { RecipeService } from './../recipes/recipe.service';
 import { AuthService } from './../auth/auth.service';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './../app-routing.module';
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
 		HeaderComponent
 	],
 	providers: [
-		AuthService
+		AuthService,
+		RecipeService
 	]
 })
 export class CoreModule {}
