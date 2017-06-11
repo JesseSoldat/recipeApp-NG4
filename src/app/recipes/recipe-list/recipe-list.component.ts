@@ -23,11 +23,15 @@ export class RecipeListComponent implements OnInit, OnDestroy {
         this.recipes = recipes;
       });
       
-    this.recipes = this.recipeService.getRecipes();
-    console.log(this.recipes);
-    
+    this.recipes = this.recipeService.getRecipes();  
+  }
+  
+  onNewRecipe() {
+    this.router.navigate(['new'], {relativeTo: this.route});
   }
 
-  ngOnDestroy() {}
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 
 }
