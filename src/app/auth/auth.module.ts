@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 	SignupComponent
 	],
 	imports: [
+		FormsModule
 	]
 })
 export class AuthModule {}
