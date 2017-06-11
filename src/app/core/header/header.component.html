@@ -15,15 +15,16 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <!--<ng-template>-->
+        <ng-template [ngIf]="!authService.isAuthenticated()">
           <li routerLinkActive="active">
             <a routerLink="/signup">Register</a>
           </li>
           <li routerLinkActive="active">
             <a routerLink="/signin">Login</a>
           </li>
-        <!--</ng-template>-->
-        <li>
+        </ng-template>
+        <li *ngIf="authService.isAuthenticated()"
+        >
           <a style="cursor: pointer"
           (click)="onLogout()">Logout
           </a>

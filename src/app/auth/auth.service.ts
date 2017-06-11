@@ -36,4 +36,8 @@ export class AuthService {
       //don't wait for async
       return this.token;
   }
+
+  isAuthenticated() {
+    return this.token != null;
+  }
 }
