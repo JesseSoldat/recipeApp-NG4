@@ -1,3 +1,4 @@
+import { AuthGuard } from './../auth/auth-guard.service';
 import { ShoppingListService } from './../shopping-list/shopping-list.service';
 import { RecipeService } from './../recipes/recipe.service';
 import { AuthService } from './../auth/auth.service';
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
 	providers: [
 		AuthService,
 		RecipeService,
-		ShoppingListService
+		ShoppingListService,
+		AuthGuard
 	]
 })
 export class CoreModule {}
